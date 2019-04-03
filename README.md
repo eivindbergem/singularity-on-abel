@@ -15,10 +15,10 @@ $ module load singularity
 
 ### Images
 
-Pre-made images are found in `~eivinabe/nobackup/singularity/`:
+Pre-made images are found in `~eivinabe/nobackup/singularity-images/`:
 
 ```
-ls ~eivinabe/nobackup/singularity/
+ls ~eivinabe/nobackup/singularity-images/
 ubuntu-16.04-cuda-8.0-cudnn-6.img
 ubuntu-16.04-cuda-9.0-cudnn-7.img
 ubuntu-17.04.img
@@ -47,6 +47,12 @@ $ singularity exec <img> <cmd>
 
 ```
 $ singularity exec --nv <img> <cmd>
+```
+
+### Bind to host directories
+
+```
+$ singularity exec -B <path> <img> <cmd>
 ```
 
 ## Building images
